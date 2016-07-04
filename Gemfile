@@ -22,6 +22,7 @@ gem 'pundit'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby
+gem 'bourbon'
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil
