@@ -23,6 +23,10 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby
 gem 'bourbon'
+gem 'jquery-validation-rails'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'rails_admin'
+gem 'cancan'
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil

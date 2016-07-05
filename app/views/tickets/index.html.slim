@@ -1,0 +1,27 @@
+h1 Listing tickets
+
+table.table.table-striped width='100%'
+  thead
+    tr
+      th Title
+      th Description
+      th status
+      th Actions
+
+  tbody
+    - @tickets.each do |ticket|
+      tr
+        td = ticket.title
+        td
+          = ticket.description.try(:truncate,100).html_safe
+        td = ticket.status
+        td colspan='3'
+          = link_to 'Show ', ticket
+          ' |
+          = link_to 'Edit ', edit_ticket_path(ticket)
+          ' |
+          = link_to 'Destroy', ticket, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Ticket', new_ticket_path
